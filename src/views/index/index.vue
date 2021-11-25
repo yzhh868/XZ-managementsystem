@@ -8,13 +8,15 @@
         <a-sub-menu key="sub1">
           <span slot="title">
             <a-icon type="folder" />
-            <span>基础信息管理</span>
+            <router-link to="/baseInformation" replace>
+              <span>基础信息管理</span>
+            </router-link>
           </span>
           <a-menu-item key="1-1">
             新增原材料种类
           </a-menu-item>
           <a-menu-item key="1-2">
-            新增仓库
+            <router-link to="/addWarehouse" replace>新增仓库</router-link>
           </a-menu-item>
           <a-menu-item key="1-3">
             新增产品规格
