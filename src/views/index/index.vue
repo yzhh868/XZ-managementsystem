@@ -7,42 +7,81 @@
       <a-menu theme="dark" :default-selected-keys="['1']" mode="inline">
         <a-sub-menu key="sub1">
           <span slot="title">
-            <a-icon type="user" />
-            <span>User</span>
+            <a-icon type="folder" />
+            <span>基础信息管理</span>
           </span>
-          <a-menu-item key="3">
-            Tom
+          <a-menu-item key="1-1">
+            新增原材料种类
           </a-menu-item>
-          <a-menu-item key="4">
-            Bill
+          <a-menu-item key="1-2">
+            新增仓库
           </a-menu-item>
-          <a-menu-item key="5">
-            Alex
+          <a-menu-item key="1-3">
+            新增产品规格
           </a-menu-item>
         </a-sub-menu>
-
-        <a-menu-item key="1">
-          <a-icon type="pie-chart" />
-          <span>Option 1</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <a-icon type="desktop" />
-          <span>Option 2</span>
-        </a-menu-item>
 
         <a-sub-menu key="sub2">
-          <span slot="title"><a-icon type="team" /><span>Team</span></span>
-          <a-menu-item key="6">
-            Team 1
+          <span slot="title">
+            <a-icon type="folder" />
+            <span>材料管理</span>
+          </span>
+          <a-menu-item key="2-1">
+            新增原材料
           </a-menu-item>
-          <a-menu-item key="8">
-            Team 2
+          <a-menu-item key="2-2">
+            原材料列表
+          </a-menu-item>
+          <a-menu-item key="2-3">
+            原材料采购申请
           </a-menu-item>
         </a-sub-menu>
-        <a-menu-item key="9">
-          <a-icon type="file" />
-          <span>File</span>
-        </a-menu-item>
+        <a-sub-menu key="sub3">
+          <span slot="title">
+            <a-icon type="folder" />
+            <span>仓库管理</span>
+          </span>
+          <a-menu-item key="3-1">
+            原材料入库
+          </a-menu-item>
+          <a-menu-item key="3-2">
+            产品入库
+          </a-menu-item>
+          <a-menu-item key="3-3">
+            原材料入库统计
+          </a-menu-item>
+          <a-menu-item key="3-4">
+            产品入库统计
+          </a-menu-item>
+        </a-sub-menu>
+        <a-sub-menu key="sub4">
+            <span slot="title">
+              <a-icon type="folder" />
+              <span>财务管理</span>
+          </span>
+        </a-sub-menu>
+        <a-sub-menu key="sub5">
+          <span slot="title">
+            <a-icon type="folder" />
+            <span>生产管理</span>
+          </span>
+          <a-menu-item key="5-1">
+            产品规格型号查看
+          </a-menu-item>
+          <a-menu-item key="5-2">
+            产品生产数量上报
+          </a-menu-item>
+          <a-menu-item key="5-3">
+            产品包装数量上报
+          </a-menu-item>
+          <a-menu-item key="5-4">
+            生产产品上报统计表
+          </a-menu-item>
+          <a-menu-item key="5-5">
+            包装产品上报统计表
+          </a-menu-item>
+        </a-sub-menu>
+
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -89,6 +128,7 @@ export default {
   data() {
     return {
       collapsed: false,
+      menuShow:false,
     };
   },
 };
