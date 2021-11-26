@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-const index = () =>import('../views/index/index')
 const addWarehouse =()=>import('../views/baseInformation/addWarehose')
 const baseInformation =()=>import('../views/baseInformation/baseInformation')
+const addNewMaterial =()=>import('../views/baseInformation/addNewMaterial')
+const addNewProdouction =()=>import('../views/baseInformation/addNewProject')
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,6 +12,7 @@ const routes = [
   {
     path: '',
     redirect:'/baseInformation'
+
   },
 
   {
@@ -26,7 +28,22 @@ const routes = [
       title:'新增仓库'
     },
     component:addWarehouse
+  },
+  {
+    path: '/addNewMaterial',
+    meta: {
+      title:'新增原材料种类'
+    },
+    component:addNewMaterial
+  },
+  {
+    path: '/addNewProdouction',
+    meta: {
+      title:'新增产品规格'
+    },
+    component:addNewProdouction
   }
+
 
 ]
 

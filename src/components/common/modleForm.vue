@@ -121,7 +121,7 @@ export default {
       e.preventDefault();
       this.form.validateFields((error, values) => {//用来判断验证输入项目是否有空值
         if (error){
-          window.confirm("事情如全部项目。点击“确定”继续！")
+          window.confirm("请输入全部项目。点击“确定”继续！")
           console.log('error', error);
         }else {
           console.log('Received values of form: ', values);

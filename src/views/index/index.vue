@@ -13,13 +13,13 @@
             </router-link>
           </span>
           <a-menu-item key="1-1">
-            新增原材料种类
+            <router-link to="/addNewMaterial" replace>新增原材料种类</router-link>
           </a-menu-item>
           <a-menu-item key="1-2">
             <router-link to="/addWarehouse" replace>新增仓库</router-link>
           </a-menu-item>
           <a-menu-item key="1-3">
-            新增产品规格
+            <router-link to="/addNewProdouction" replace>新增产品规格</router-link>
           </a-menu-item>
         </a-sub-menu>
 
