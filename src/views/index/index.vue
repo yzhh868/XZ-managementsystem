@@ -8,9 +8,11 @@
         <a-sub-menu key="sub1">
           <span slot="title">
             <a-icon type="folder" />
-            <router-link to="/baseInformation" replace>
-              <span>基础信息管理</span>
-            </router-link>
+            <span>
+              <router-link to="/baseInformation" replace>
+              基础信息管理
+              </router-link>
+            </span>
           </span>
           <a-menu-item key="1-1">
             <router-link to="/addNewMaterial" replace>新增原材料种类</router-link>
@@ -26,10 +28,12 @@
         <a-sub-menu key="sub2">
           <span slot="title">
             <a-icon type="folder" />
-            <span>材料管理</span>
+            <span>
+              <router-link to="/materialManagment">材料管理</router-link>
+            </span>
           </span>
           <a-menu-item key="2-1">
-            新增原材料
+            <router-link to="addNewMaterialProduction">新增原材料</router-link>
           </a-menu-item>
           <a-menu-item key="2-2">
             原材料列表

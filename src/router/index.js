@@ -5,6 +5,8 @@ const addWarehouse =()=>import('../views/baseInformation/addWarehose')
 const baseInformation =()=>import('../views/baseInformation/baseInformation')
 const addNewMaterial =()=>import('../views/baseInformation/addNewMaterial')
 const addNewProdouction =()=>import('../views/baseInformation/addNewProject')
+const materialManagment =()=>import('../views/materialManagement/materialManagement')
+const addNewMaterialProduction =()=>import('../views/materialManagement/addNewMaterialProduction')
 Vue.use(VueRouter)
 
 const routes = [
@@ -42,6 +44,20 @@ const routes = [
       title:'新增产品规格'
     },
     component:addNewProdouction
+  },
+  {
+    path: '/materialManagment',
+    meta: {
+      title:'材料管理'
+    },
+    component:materialManagment
+  },
+  {
+    path: '/addNewMaterialProduction',
+    meta: {
+      title:'新增原材料',
+    },
+    component:addNewMaterialProduction
   }
 
 

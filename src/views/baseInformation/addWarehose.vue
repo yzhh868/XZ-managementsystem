@@ -52,10 +52,6 @@
 
       </a-row>
 
-
-
-
-
       <a-row>
         <a-col :span="24" :style="{ textAlign: 'right' }">
           <a-button type="primary" html-type="submit">
