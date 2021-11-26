@@ -6,7 +6,9 @@
           disabled="disabled"
           v-decorator="[
             'materialCode',
-            validatorRules.inputValue
+            {
+              rules:[{required:true, message:'请输入原材料编码'}]
+            }
           ]"
         />
       </a-form-item>
@@ -66,12 +68,6 @@ let index =0;
 export default {
   data(){
     return{
-      validatorRules:{
-        inputValue:{
-          rules:[{required:true,message:'请输入原材料编码'}],
-          initialValue:this.aaa
-        }
-      },
         items:['主材料','副材料'],
         form:this.$form.createForm(this,{name:'advanced' }),
         aaa:'0001'
@@ -86,15 +82,15 @@ export default {
         return "XZ-"+time+"-"+code;
       }
   },
-  created() {
-    this.$nextTick(()=>{
+  created() {//用来自动生成原材料编码的代码块,create是vue创建前执行的
+    this.$nextTick(()=>{//该方法的作用是在vue创建该页面以后，回调nextTick()实现处理默认数据的事情的
       this.form.setFieldsValue({
         materialCode:this.codeMaterial
-      })
-    })
+      });
+    });
   },
   methods: {
-    handleSubmit(e) {
+    handleSubmit(e) {//提交数据的代码块
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
@@ -106,7 +102,7 @@ export default {
         }
       });
     },
-    getTime(){
+    getTime(){//获取当前时间的代码块，格式为YY-mm-dd--HH:mm
       let date = new Date();
       let year = date.getFullYear();
       let month = date.getMonth()+1<10 ? "0"+(date.getMonth()+1) : date.getMonth()+1;

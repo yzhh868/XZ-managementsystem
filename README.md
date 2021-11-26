@@ -52,3 +52,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
    1、 目前项目正在前端搭建阶段
 ```
+
+### 项目笔记
+```
+    <a-input/> 在使用v-decorator时候，默认值要通过这种方式实现：
+    created() {//用来自动生成原材料编码的代码块,create是vue创建前执行的
+    this.$nextTick(()=>{//该方法的作用是在vue创建该页面以后，回调nextTick()实现处理默认数据的事情的
+      this.form.setFieldsValue({
+        materialCode:this.codeMaterial
+      });
+    });
+```
+
